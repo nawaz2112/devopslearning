@@ -49,6 +49,7 @@ jobs:
           cd "$REPO_DIR"
           git pull origin "$BRANCH"
         else
+          sudo dnf install git -y
           sudo yum install git -v
           git clone "$REPO_URL" "$REPO_DIR"
           cd "$REPO_DIR"
